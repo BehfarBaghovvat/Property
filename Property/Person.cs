@@ -7,6 +7,8 @@
         private string fullname;
         private ulong salary;
 
+
+
         /// <summary>
         /// Property Age
         /// </summary>
@@ -64,9 +66,42 @@
             System.Console.WriteLine();
         }
 
+        /// <summary>
+        /// Snippet Propfull for Weight
+        /// </summary>
+
+        private int weight;
+
+        public int Weight
+        {
+            get
+            {
+                return weight;
+            }
+            set
+            {
+                weight = value;
+            }
+        }
+
+        /// <summary>
+        /// Snippet propfull for Height
+        /// </summary>
 
 
+        private int height;
 
+        public int Height
+        {
+            get
+            {
+                return height;
+            }
+            set
+            {
+                height = value;
+            }
+        }
 
 
 
