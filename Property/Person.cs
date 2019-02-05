@@ -1,17 +1,23 @@
 ﻿namespace Property
 {
+
+    /// <summary>
+    /// Person Class
+    /// </summary>
     class Person
     {
-
-        private uint age;
-        private string fullname;
-        private ulong salary;
-
-
+        #region Age
 
         /// <summary>
-        /// Property Age
+        ///  age field
         /// </summary>
+        /// 
+        private uint age;
+
+        /// <summary>
+        /// Age Property
+        /// </summary>
+        /// 
 
         public uint Age
         {
@@ -22,18 +28,35 @@
 
             set
             {
-                if (value>=0 && value<=150)
+                if (value >= 0 && value <= 150)
                 {
                     age = value;
                 }
             }
         }
 
-        public string FullName { get; set; }
-        
+        #endregion /Age
+
+        #region FullName
 
         /// <summary>
-        /// Property Salary
+        /// FullName Property
+        /// </summary>
+
+        public string FullName { get; set; }
+
+        #endregion /FullName
+
+        #region Salary
+
+        /// <summary>
+        /// salary field
+        /// </summary>
+
+        private ulong salary;
+
+        /// <summary>
+        /// Salary Property
         /// </summary>
 
         public ulong Salary
@@ -45,32 +68,25 @@
 
             set
             {
-                if (value>=0 && value<=50000000)
+                if (value >= 0 && value <= 50000000)
                 {
                     salary = value;
                 }
             }
         }
 
+        #endregion /Salary
+
+        #region Weight
         /// <summary>
-        /// Method Show Information.
-        /// </summary>
-
-        public void ShowInfo()
-        {
-            string message =
-                $"My name is { FullName } and... { Age } years old and.... my salary { Salary }$ ";
-
-            System.Console.WriteLine(message);
-
-            System.Console.WriteLine();
-        }
-
-        /// <summary>
-        /// Snippet Propfull for Weight
+        /// weight field
         /// </summary>
 
         private int weight;
+
+        /// <summary>
+        /// Weight Property
+        /// </summary>
 
         public int Weight
         {
@@ -84,12 +100,19 @@
             }
         }
 
+        #endregion /Weight
+
+        #region Height
+
         /// <summary>
-        /// Snippet propfull for Height
+        /// height field
         /// </summary>
 
-
         private int height;
+
+        /// <summary>
+        /// Height property
+        /// </summary>
 
         public int Height
         {
@@ -102,8 +125,25 @@
                 height = value;
             }
         }
+    
+        #endregion Height
 
+        #region Show InforMation
 
+        /// <summary>
+        /// Show Information Method
+        /// </summary>
 
+        public void ShowInformation()
+        {
+            string message =
+                $"My name is { FullName } and... { Age } years old and.... my salary { Salary }$ ";
+
+            System.Console.WriteLine(message);
+
+            System.Console.WriteLine();
+        }
+
+        #endregion /Show InforMation
     }
 }
