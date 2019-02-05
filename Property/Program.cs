@@ -1,43 +1,19 @@
 ﻿namespace Property
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Person person = new Person(100000)
+			{
+				Age = 39,
+				FullName = "James T Cerk",
+			};
 
-            Person person = new Person
-            {
-                Age = 39,
-                FullName = "James T Cerk",
-                Salary = 10000,
-            };
+			person.ShowInformation();
 
-            person.ShowInfo();
-
-            Person p1 = new Person
-            {
-
-                Age = 40,
-
-                FullName ="Jenifer Daison",
-
-                Salary=7800,
-            };            
-
-            p1.ShowInfo();
-
-
-
-
-
-
-
-            System.Console.WriteLine();
-
-            System.Console.ReadLine();
-
-        }   
-        
-    }
+			System.Console.WriteLine("Press [ENTER] To Exit... ");
+			System.Console.ReadLine();
+		}
+	}
 }
-

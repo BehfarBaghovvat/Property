@@ -1,109 +1,89 @@
 ﻿namespace Property
 {
-    class Person
-    {
+	/// <summary>
+	/// 
+	/// </summary>
+	class Person
+	{
+		public Person(long salary) : base()
+		{
+			Salary = salary;
+		}
 
-        private uint age;
-        private string fullname;
-        private ulong salary;
+		#region Age Property
+		/// <summary>
+		/// 
+		/// </summary>
+		private int age;
 
+		/// <summary>
+		/// 
+		/// </summary>
+		public int Age
+		{
+			get
+			{
+				return age;
+			}
+			set
+			{
+				if (value >= 0 && value <= 100)
+				{
+					age = value;
+				}
+			}
+		}
+		#endregion /Age Property
 
+		#region Salary Property
+		/// <summary>
+		/// Googooli
+		/// </summary>
+		private long salary;
 
-        /// <summary>
-        /// Property Age
-        /// </summary>
+		/// <summary>
+		/// Magooli
+		/// </summary>
+		public long Salary
+		{
+			get
+			{
+				return salary;
+			}
+			private set
+			{
+				if (value >= 0 && value <= 50000000)
+				{
+					salary = value;
+				}
+			}
+		}
+		#endregion /Salary Property
 
-        public uint Age
-        {
-            get
-            {
-                return age;
-            }
+		#region FullName Property
+		/// <summary>
+		/// 
+		/// </summary>
+		public string FullName { get; set; }
+		#endregion /FullName Property
 
-            set
-            {
-                if (value>=0 && value<=150)
-                {
-                    age = value;
-                }
-            }
-        }
+		#region Weight Property
+		private int Weight { get; set; }
+		#endregion /Weight Property
 
-        public string FullName { get; set; }
-        
+		#region Height Property
+		public int Height { get; set; }
+		#endregion /Height Property
 
-        /// <summary>
-        /// Property Salary
-        /// </summary>
+		/// <summary>
+		/// Show Information Method
+		/// </summary>
+		public void ShowInformation()
+		{
+			string message =
+				$"My name is { FullName } and { Age } years old and I get { Salary }$";
 
-        public ulong Salary
-        {
-            get
-            {
-                return salary;
-            }
-
-            set
-            {
-                if (value>=0 && value<=50000000)
-                {
-                    salary = value;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Method Show Information.
-        /// </summary>
-
-        public void ShowInfo()
-        {
-            string message =
-                $"My name is { FullName } and... { Age } years old and.... my salary { Salary }$ ";
-
-            System.Console.WriteLine(message);
-
-            System.Console.WriteLine();
-        }
-
-        /// <summary>
-        /// Snippet Propfull for Weight
-        /// </summary>
-
-        private int weight;
-
-        public int Weight
-        {
-            get
-            {
-                return weight;
-            }
-            set
-            {
-                weight = value;
-            }
-        }
-
-        /// <summary>
-        /// Snippet propfull for Height
-        /// </summary>
-
-
-        private int height;
-
-        public int Height
-        {
-            get
-            {
-                return height;
-            }
-            set
-            {
-                height = value;
-            }
-        }
-
-
-
-    }
+			System.Console.WriteLine(message);
+		}
+	}
 }
